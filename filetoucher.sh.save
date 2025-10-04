@@ -1,0 +1,34 @@
+** tannerDudley **
+
+"\*\* This is Lab 0. It is a simple shell script that count the amount of files in a given directory and add them to a new text file. If that file detailing the names of files exists, overwrite it. \*\*""#!/bin/sh
+#
+#Shell Script that will check if an inputted file exists in the current directory and adds it to a list 
+#that will be printed out. If it doesn't create that file.
+#If it does, we will overwrite that file and print it out.
+
+echo "File name: $1" 
+
+#The inputted file name will be the new file this script creates
+FILE=$1
+
+#Checks to see if the file exists, if it does it uses >$FILE to delete the contents. Otherwise create the file 
+#using touch
+if [ -e $FILE ]; then
+>$FILE
+
+else
+
+touch $FILE
+fi
+
+#Check through all the files in the current directory, then prints out each file in the inputted file name
+for f in *; do
+if [ -f "$f" ]; then
+echo "$f" >> "$FILE"
+fi
+done
+
+cat "$FILE"
+
+
+
