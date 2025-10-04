@@ -1,4 +1,6 @@
-"\*\* tannerDudley \*\*"
+## Lab 0 First time using Shell Scripts
 
-"\*\* This is Lab 0. It is a simple shell script that count the amount of files in a given directory and add them to a new text file. If that file detailing the names of files exists, overwrite it. \*\*""
+This shell script checks if a file exists in your directory with the given name. If it does
+rewrite the contents, if it doesn't create that file. Then go through and add all file names to that new text file and print out 
+it's contents. Very straightforward, very easy.
 
